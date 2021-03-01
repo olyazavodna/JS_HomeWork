@@ -43,7 +43,7 @@ console.log(typeof group)
 console.log(typeof yearOfBirth)
 console.log(typeof isMarried)
 
-console.log(yearOfBirth,isMarried,firstName)
+console.log(yearOfBirth, isMarried, firstName)
 
 let itIsNull
 itIsNull = null
@@ -59,7 +59,7 @@ let login = prompt("What is your login?")
 let mail = prompt("What is your email?")
 let password = prompt("What is your password?")
 
-document.write("Dear "+login+", your email is "+mail+", your password is "+password+".")
+document.write("Dear " + login + ", your email is " + mail + ", your password is " + password + ".")
 
 // Task8
 
@@ -69,4 +69,4 @@ let hour = minute * 60
 let day = hour * 24
 let month = day * 31
 
-document.write("<br>Seconds in 1 hour = "+hour+" Seconds in 24 hours = "+day+" Seconds in 1 month = "+month)
+document.write("<br>Seconds in 1 hour = " + hour + " Seconds in 24 hours = " + day + " Seconds in 1 month = " + month)
