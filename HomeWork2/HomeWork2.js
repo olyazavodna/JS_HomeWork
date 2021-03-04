@@ -90,6 +90,18 @@ if (isNaN(a) || isNaN(b) || isNaN(c)) {
     let p = (a + b + c) / 2
     let area = (p * (p - a) * (p - b) * (p - c)) ** (1 / 2)
     console.log("Area of a triangle = " + area.toFixed(3))
+
+    let sides_array = [a, b, c]
+    sides_array.sort()
+    let sum_of_sqr = sides_array[0] ** 2 + sides_array[1] ** 2 
+    let largest_sqr = sides_array[2] ** 2
+
+    if (sum_of_sqr == largest_sqr) {
+        console.log("Triangle is rectangular")
+    } else {
+        console.log("Triangle is NOT rectangular")
+    }
+    
 }
 
 /////// task 7 /////// 
@@ -109,7 +121,7 @@ if (hour >= 5 && hour < 11) {
 }
 
 // ---- case2
-switch (hour) {
+switch (true) {
     case (hour >= 5 && hour < 11):
         console.log("Good morning");
         break;
