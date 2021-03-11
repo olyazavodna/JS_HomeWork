@@ -67,7 +67,7 @@ try {
 
 function showUser(id) {
     if (id < 0) {
-        throw new Error("Id must not be negative")
+        throw new Error("Id must not be negative: " + id)
     } else {
         return { id: id }
     }
