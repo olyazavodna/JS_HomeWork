@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="button">Live button!</button>
+
+
+    <script>
+        function printMessage(message) {
+            let p = document.createElement("p")
+            p.innerHTML = message
+            document.body.appendChild(p)
+        }
+
+        button.onclick = function () {
+            printMessage("I was pressed!")
+        }
+
+        button.onmouseover = function () {
+            printMessage("Mouse on me!")
+        }
+
+        button.onmouseout = function () {
+            printMessage("Mouse is not on me!")
+        }
+
+    </script>
+
+</body>
+
+</html>

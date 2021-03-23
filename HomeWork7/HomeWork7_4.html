@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="dropdown with names" id="dropdown">
+        <option value="peter">Peter</option>
+        <option value="john">John</option>
+        <option value="alice">Alice</option>
+        <option value="alex">Alex</option>
+        <option value="iren">Iren</option>
+        <option value="tom">Tom</option>
+    </select>
+
+    <button id="button">Choose and Delete</button>
+
+    <script>
+        function deleteSelected() {
+            let list = document.querySelector('#dropdown')
+            let selected = list.selectedOptions[0].remove();
+        }
+
+        button.onclick = deleteSelected
+
+    </script>
+
+</body>
+
+</html>

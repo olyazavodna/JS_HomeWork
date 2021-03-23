@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <select name="country" id="country">
+        <option value="ger">Germany</option>
+        <option value="usa">USA</option>
+        <option value="ukr">Ukraine</option>
+    </select>
+
+    <select name="cities" id="cities"></select>
+    <p></p>
+
+    <script>
+        let countriesList = {
+            "ukr": ["Kyiv", "Lviv", "Ternopil"],
+            "usa": ["New York", "Chicago", "Los Angeles"],
+            "ger": ["Berlin", "Drezden", "Munich"]
+        }
+
+        function printCurrentState() {
+            let resultCountry = country.options[country.selectedIndex].text
+            let resultCity = cities.options[cities.selectedIndex].text
+            let p = document.getElementsByTagName("p")[0]
+            p.innerHTML = resultCountry + ", " + resultCity
+        }
+
+        function populateCitiesDropdown() {
+            let selectedCountry = country.options[country.selectedIndex].value
+            let citiesList = countriesList[selectedCountry]
+
+            cities.innerHTML = ""
+
+            for (let i = 0; i < citiesList.length; i++) {
+                let el = document.createElement("option")
+                el.text = citiesList[i]
+                cities.appendChild(el)
+            }
+
+            printCurrentState()
+        }
+
+        populateCitiesDropdown()
+        country.addEventListener("change", populateCitiesDropdown)
+        cities.addEventListener("change", printCurrentState)
+
+    </script>
+
+</body>
+
+</html>

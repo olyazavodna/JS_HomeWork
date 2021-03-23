@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id=button1 onclick="button1()">Click to make the page blue</button>
+    <button id=button2 ondblclick="button2()">Double-click to make the page pink</button>
+    <button id=button3 onmousedown="button3down()" onmouseup="up()">Click and hold to make the paga brown</button>
+    <a href="https://www.w3schools.com/" id="link" onmouseover="linkOver()" onmouseout="up()">Hover over to make page
+        yellow</a>
+
+    <script>
+        function button1() { document.body.style.backgroundColor = "#050df7" }
+        function button2() { document.body.style.backgroundColor = "#f705cf" }
+        function button3down() { document.body.style.backgroundColor = "#914b04" }
+        function linkOver() { document.body.style.backgroundColor = "#fffb00" }
+        function up() { document.body.style.backgroundColor = "#ffffff" }
+    </script>
+
+
+</body>
+
+</html>
